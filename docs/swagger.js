@@ -6,7 +6,7 @@ const options = {
     info: {
       title: 'API Productos',
       version: '1.0.0',
-      description: 'Documentación de mi API'
+      description: 'API de productos'
     },
     servers: [
       {

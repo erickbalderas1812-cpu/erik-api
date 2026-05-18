@@ -6,11 +6,11 @@ const options = {
     info: {
       title: 'API Productos',
       version: '1.0.0',
-      description: 'API REST con Node.js y Express'
+      description: 'Documentación de mi API'
     },
     servers: [
       {
-        url: 'http://localhost:3000'
+        url: 'https://erik-api.onrender.com'
       }
     ]
   },
@@ -20,3 +20,4 @@ const options = {
 const swaggerSpec = swaggerJsdoc(options);
 
 module.exports = swaggerSpec;
+

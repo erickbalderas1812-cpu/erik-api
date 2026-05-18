@@ -10,17 +10,10 @@ app.use(express.json());
 
 app.set('json spaces', 2);
 
-// Swagger
-app.use(
-  '/api-docs',
-  swaggerUi.serve,
-  swaggerUi.setup(swaggerSpec)
-);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-// Rutas
-app.use('/productos', productosRoutes);
+app.use(productosRoutes);
 
-// Ruta principal
 app.get('/', (req, res) => {
   res.json({
     mensaje: 'API funcionando correctamente'
@@ -32,4 +25,3 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en puerto ${PORT}`);
 });
-
